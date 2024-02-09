@@ -1,28 +1,21 @@
-import React from 'react'
+import Category from "../sidebar/category/Category";
+import Price from "../sidebar/price/Price";
+import Colors from "../sidebar/colors/Colors";
+import "./Sidebar.css";
 
-import Category from './category/Category';
-import Colors from './colors/Colors';
-import Price from './price/Price';
-
-import { TiShoppingCart } from "react-icons/ti";
-
-import './Sidebar.css'
-
-const Sidebar = (handleChange) => {
+const Sidebar = ({ handleChange }) => {
   return (
     <>
-      <section className='sidebar'>
-        <div className='logo-container'>
-          <h1><TiShoppingCart /></h1>
+      <section className="sidebar">
+        <div className="logo-container">
+          <h1>🛒</h1>
         </div>
-
         <Category handleChange={handleChange} />
         <Price handleChange={handleChange} />
         <Colors handleChange={handleChange} />
-
       </section>
     </>
-  )
-}
+  );
+};
 
-export default Sidebar
+export default Sidebar;
